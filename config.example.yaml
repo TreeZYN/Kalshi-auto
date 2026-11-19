@@ -1,0 +1,43 @@
+# ============================================================
+# Kalshi Auto Trader - Configuration
+# Most settings can be changed live in the Streamlit dashboard.
+# ============================================================
+
+# Simple mode toggle (dashboard makes this easy)
+mode: "demo_paper"          # demo_paper | demo_live | prod_paper | prod_live
+# demo_paper  = safest (recommended)
+# demo_live   = real orders on demo money
+# prod_paper  = paper trading using production data
+# prod_live   = REAL MONEY - extreme caution
+
+# API Credentials (best entered in the dashboard)
+api_key_id: ""
+private_key_pem: ""
+private_key_path: ""
+
+# Risk (hard limits)
+bankroll_usd: 1000.0
+max_position_pct: 0.015
+max_total_exposure_pct: 0.15
+daily_loss_limit_pct: 0.04
+max_orders_per_hour: 30
+min_liquidity_usd: 300.0
+
+# Trading
+default_order_size_contracts: 5
+prefer_post_only: true
+price_offset_cents: 3
+auto_trade: false
+scan_interval_seconds: 45
+
+# Focus
+allowed_series: []
+excluded_series: []
+
+# Strategies
+enable_maker_strategy: true
+enable_relative_value: true
+enable_value_betting: false
+
+log_level: INFO
+log_file: logs/trader.log
